@@ -1,4 +1,4 @@
-//*À¯Ã¤¸°_ÄÄÇ»ÅÍ¼ÒÇÁÆ®¿ş¾î_20102088*//
+
 #include<iostream>
 using namespace std;
 
@@ -9,7 +9,7 @@ class TV {
 
 public:
 	
-	void powerOn() {//TVÄ×À» ¶§
+	void powerOn() {//TVì¼°ì„ ë•Œ
 		on = true;
 		cout << "TV ON" << endl;
 		
@@ -18,41 +18,41 @@ public:
 		on = false;
 		cout << "TV OFF" << endl;
 	}
-	void increaseChannel() {//Ã¤³Î 0~20±îÁö ÀÖÀ» ¶§ Ã¤³Î 20À» ³Ñ±â¸é ´Ù½Ã 0À¸·Î
+	void increaseChannel() {//ì±„ë„ 0~20ê¹Œì§€ ìˆì„ ë•Œ ì±„ë„ 20ì„ ë„˜ê¸°ë©´ ë‹¤ì‹œ 0ìœ¼ë¡œ
 		cout << "CAHNNEL UP" << endl;
 		channel++;
 		channel %= 21;
 
 	}
-	void decreaseChannel() {//Ã¤³Î 0¿¡¼­ ³»¸®¸é 20À¸·Î
+	void decreaseChannel() {//ì±„ë„ 0ì—ì„œ ë‚´ë¦¬ë©´ 20ìœ¼ë¡œ
 		cout << "CHANNEL DOWN" << endl;
 		if (channel == 0)
 			channel = 20;
 		else
 			channel--;
 	}
-	void increasVolume() {//º¼·ı 0~10±îÁö, 10ÀÌ»óÀº ¿Ã¶ó°¡Áö¾ÊÀ½.
+	void increasVolume() {//ë³¼ë¥¨ 0~10ê¹Œì§€, 10ì´ìƒì€ ì˜¬ë¼ê°€ì§€ì•ŠìŒ.
 			cout << "INCREASE VOLUME" << volume << endl;
 			if (volume < 10)
 				volume++;
 		
 	}
-	void decreaseVolume() {//º¼·ı 0¿¡¼­ ´õ ³»·Á°¡Áö ¾ÊÀ½.
+	void decreaseVolume() {//ë³¼ë¥¨ 0ì—ì„œ ë” ë‚´ë ¤ê°€ì§€ ì•ŠìŒ.
 			cout << "DECREASE VOLUME" << volume << endl;
 			if (volume > 0)
 				volume--;
 		
     }
-	void getChannel(int c) {//ÀÔ·ÂÇÑ Ã¤³Î·Î ÀÌµ¿
+	void getChannel(int c) {//ì…ë ¥í•œ ì±„ë„ë¡œ ì´ë™
 		if (c > 0 && c < 21) {
 			channel = c;
 			cout << "CHANNEL" << c << endl;
 		}
 		else {
-			cout << "Àß¸øµÈ ÀÔ·Â" << endl;
+			cout << "ì˜ëª»ëœ ì…ë ¥" << endl;
 		}
 	}
-	void show_info() {//Ã¤³Î°ú º¼·ı Ãâ·Â
+	void show_info() {//ì±„ë„ê³¼ ë³¼ë¥¨ ì¶œë ¥
 		cout << "CHANNEL:" << channel << ", VOLUME:" << volume << endl;
 	}
 };
@@ -64,7 +64,7 @@ void main() {
 	int ch;
 
 	while (1) {
-		cout << "1:CHANNEL + \t2:CHANNEL - \t3:Ã¤³Î¼±ÅÃ \t4:VOLUME +" << endl;
+		cout << "1:CHANNEL + \t2:CHANNEL - \t3:ì±„ë„ì„ íƒ \t4:VOLUME +" << endl;
 		cout << "5:VOLUME - \t6:SELECT \t7:TV ON \t8:TV OFF" << endl;
 		cin >> menu;
 
